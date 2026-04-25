@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Increase Notice Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #36597A, #1a1a2e); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #36597A, #CFA58C); padding: 30px; text-align: center; color: white; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 0.9rem; }
+        .content { padding: 30px; }
+        .notice-box { background: #fef3c7; border: 2px solid #fcd34d; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
+        .notice-box h3 { color: #d97706; margin-bottom: 10px; }
+        .notice-box p { color: #92400e; font-size: 0.9rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.9rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .rent-comparison { background: #fef2f2; padding: 25px; border-radius: 12px; margin: 20px 0; }
+        .rent-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 2px solid #fecaca; }
+        .rent-row:last-child { border-bottom: none; }
+        .rent-row .label { font-weight: 600; color: #475569; }
+        .rent-row .amount { font-size: 1.5rem; font-weight: 700; }
+        .rent-row.old .amount { color: #dc2626; text-decoration: line-through; }
+        .rent-row.new .amount { color: #16a34a; }
+        .rent-row.increase .amount { color: #d97706; }
+        .increase-badge { background: #dcfce7; padding: 15px; border-radius: 10px; text-align: center; margin-top: 15px; }
+        .increase-badge .percent { font-size: 2rem; font-weight: 700; color: #16a34a; }
+        .increase-badge .label { font-size: 0.85rem; color: #166534; }
+        .legal-ref { background: #f8fafc; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .legal-ref h4 { color: #475569; margin-bottom: 10px; }
+        .legal-ref ul { margin-left: 20px; color: #64748b; font-size: 0.85rem; }
+        .legal-ref li { margin-bottom: 5px; }
+        .options-section { background: #f0fdf4; padding: 20px; border-radius: 12px; margin: 20px 0; border: 2px solid #22c55e; }
+        .options-section h4 { color: #166534; margin-bottom: 15px; }
+        .option-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .option-row input[type="checkbox"] { width: 20px; height: 20px; }
+        .option-row span { color: #166534; font-size: 0.9rem; }
+        .contact-box { background: #f8fafc; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .contact-box h4 { margin-bottom: 15px; color: #333; }
+        .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        .signatures { margin-top: 30px; text-align: center; }
+        .signature-line { border-bottom: 2px solid #333; height: 40px; width: 250px; margin: 0 auto 10px; }
+        .print-btn { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+        .back-btn { position: fixed; bottom: 30px; left: 30px; background: #475569; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-size: 0.9rem; cursor: pointer; }
+        @media print { body { background: white; padding: 0; } .print-btn, .back-btn { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 NOTICE OF RENT INCREASE</h1>
+            <p>Rent Increase Notice Template</p>
+        </div>
+        <div class="content">
+            <div class="notice-box">
+                <h3>⚠️ Legal Requirement</h3>
+                <p>Under RA 9653 and its Implementing Rules and Regulations, any rent increase must be given with <strong>at least 90 days written notice</strong> before the effective date. Failure to provide proper notice may render the increase unenforceable.</p>
+            </div>
+            
+            <div class="form-group">
+                <label>Date:</label>
+                <input type="text" placeholder="[CURRENT DATE]">
+            </div>
+            
+            <div class="form-group">
+                <label>TO (Tenant Name):</label>
+                <input type="text" placeholder="[TENANT FULL NAME]">
+            </div>
+            
+            <div class="form-group">
+                <label>Property Address:</label>
+                <input type="text" placeholder="[PROPERTY ADDRESS]">
+            </div>
+            
+            <div class="form-group">
+                <label>Dear Mr./Ms.:</label>
+                <input type="text" placeholder="[TENANT LAST NAME]">
+            </div>
+            
+            <div class="form-group">
+                <label>Original Lease Agreement Date:</label>
+                <input type="text" placeholder="[DATE OF ORIGINAL LEASE]">
+            </div>
+            
+            <div class="rent-comparison">
+                <h4 style="margin-bottom: 15px; color: #333;">💰 Monthly Rent Comparison</h4>
+                <div class="rent-row old">
+                    <span class="label">Current Monthly Rent:</span>
+                    <span class="amount">PHP _______________</span>
+                </div>
+                <div class="rent-row increase">
+                    <span class="label">Increase Amount:</span>
+                    <span class="amount">+ PHP _______________</span>
+                </div>
+                <div class="rent-row new">
+                    <span class="label">New Monthly Rent:</span>
+                    <span class="amount">PHP _______________</span>
+                </div>
+                <div class="increase-badge">
+                    <div class="percent">__%</div>
+                    <div class="label">Total Increase</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Effective Date:</label>
+                <input type="text" placeholder="[DATE - at least 90 days from notice date]">
+            </div>
+            
+            <div class="form-group">
+                <label>Reason for Increase (Optional):</label>
+                <input type="text" placeholder="[e.g., market rates, cost of living, property improvements]">
+            </div>
+            
+            <div class="legal-ref">
+                <h4>📜 Legal Reference:</h4>
+                <ul>
+                    <li>RA 9653 (Rent Control Act of 2009)</li>
+                    <li>RA 11203 (Rent Freeze Extension)</li>
+                    <li>RA 9653 IRR - Rule on Rent Increases</li>
+                    <li>Notice must be given at least 90 days before effective date</li>
+                </ul>
+            </div>
+            
+            <div class="options-section">
+                <h4>📋 Tenant Options:</h4>
+                <div class="option-row">
+                    <input type="checkbox">
+                    <span>I/We wish to continue with the lease under the new rate starting [EFFECTIVE DATE]</span>
+                </div>
+                <div class="option-row">
+                    <input type="checkbox">
+                    <span>I/We choose NOT to continue with the lease and will vacate on [DATE]</span>
+                </div>
+                <div class="option-row">
+                    <input type="checkbox">
+                    <span>I/We would like to discuss this matter before accepting the increase</span>
+                </div>
+            </div>
+            
+            <div class="contact-box">
+                <h4>📞 Contact Information:</h4>
+                <div class="form-row-3">
+                    <div class="form-group">
+                        <label>Phone:</label>
+                        <input type="text" placeholder="[PHONE NUMBER]">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" placeholder="[EMAIL ADDRESS]">
+                    </div>
+                    <div class="form-group">
+                        <label>Address:</label>
+                        <input type="text" placeholder="[OWNER ADDRESS]">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Additional Notes (Optional):</label>
+                <textarea placeholder="Any additional statements or requests..."></textarea>
+            </div>
+            
+            <div class="signatures">
+                <div class="signature-line"></div>
+                <p><strong>Landlord/Owner Signature</strong></p>
+                <p>Name: _______________ Date: _______________</p>
+                <p style="margin-top: 15px;">Contact Number: _______________</p>
+            </div>
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='Philippine_Rental_Checklist_Modern.html'">← Back to Checklist</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>

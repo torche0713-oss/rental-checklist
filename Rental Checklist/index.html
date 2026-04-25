@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Rental Checklist - Access</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #36597A, #2a4a66); min-height: 100vh; padding: 20px; }
+        .container { max-width: 650px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #36597A, #CFA58C); padding: 40px 30px; text-align: center; color: white; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; color: white; }
+        .header p { opacity: 0.9; font-size: 1rem; margin-bottom: 15px; color: rgba(255,255,255,0.9); }
+        .price-tag { background: rgba(255,255,255,0.2); display: inline-block; padding: 10px 25px; border-radius: 30px; font-size: 1.5rem; font-weight: 700; }
+        .old-price { text-decoration: line-through; opacity: 0.7; font-size: 1rem; margin-right: 10px; }
+        .content { padding: 30px; }
+        .pain-header { background: #fef2f2; border-left: 4px solid #CFA58C; padding: 15px; border-radius: 0 10px 10px 0; margin-bottom: 20px; }
+        .pain-header p { color: #36597A; font-size: 0.9rem; }
+        .benefits { margin: 20px 0; }
+        .benefit { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: #f8fafc; border-radius: 10px; margin-bottom: 10px; border-left: 4px solid #CFA58C; }
+        .benefit-icon { font-size: 1.3rem; }
+        .benefit-text { color: #333; font-size: 0.9rem; line-height: 1.5; }
+        .benefit-text strong { color: #36597A; }
+        .sections-list { background: #f8fafc; border-radius: 12px; padding: 15px; margin: 20px 0; }
+        .sections-list h3 { color: #333; font-size: 1rem; margin-bottom: 15px; }
+        .section-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: white; border-radius: 8px; margin-bottom: 8px; }
+        .section-num { background: #36597A; color: white; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+        .section-name { color: #333; font-size: 0.8rem; }
+        .bonus-box { background: #fef3e2; border: 2px solid #CFA58C; padding: 15px; border-radius: 12px; margin: 20px 0; }
+        .bonus-box h3 { color: #36597A; margin-bottom: 12px; font-size: 1rem; }
+        .bonus-box ul { margin-left: 18px; color: #36597A; font-size: 0.85rem; }
+        .bonus-box li { margin-bottom: 5px; }
+        .testimonial { background: #fefce3; border: 2px solid #CFA58C; padding: 15px; border-radius: 12px; margin: 20px 0; }
+        .testimonial p { color: #713f12; font-size: 0.85rem; font-style: italic; }
+        .testimonial .author { color: #a16207; font-size: 0.8rem; margin-top: 8px; font-weight: 600; }
+        .payment-box { background: #fef3e2; border: 2px solid #CFA58C; padding: 25px; border-radius: 15px; margin: 25px 0; }
+        .payment-box h3 { color: #36597A; margin-bottom: 15px; text-align: center; }
+        .gcash-details { text-align: center; margin: 15px 0; }
+        .gcash-number { background: white; padding: 15px; border-radius: 10px; font-size: 1.5rem; font-weight: 700; color: #36597A; margin: 10px 0; }
+        .steps { counter-reset: step; }
+        .step { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; }
+        .step-number { background: #36597A; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+        .step-text { color: #475569; font-size: 0.9rem; line-height: 1.5; }
+        .form-link { display: block; background: linear-gradient(135deg, #36597A, #2a4a66); color: white; padding: 18px; border-radius: 12px; text-align: center; font-weight: 600; text-decoration: none; margin-top: 20px; transition: transform 0.2s; }
+        .form-link:hover { transform: translateY(-2px); }
+        .guarantee { background: #f0f9ff; border-left: 4px solid #CFA58C; padding: 15px; border-radius: 0 10px 10px 0; margin-top: 20px; }
+        .guarantee p { color: #36597A; font-size: 0.85rem; }
+        .legal-box { background: #fef3c7; border: 2px solid #CFA58C; padding: 15px; border-radius: 12px; margin: 20px 0; }
+        .legal-box h4 { color: #36597A; margin-bottom: 10px; font-size: 0.95rem; }
+        .legal-box ul { color: #36597A; font-size: 0.8rem; margin-left: 18px; }
+        .target-box { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+        .target { background: #fef3e2; padding: 15px 10px; border-radius: 10px; text-align: center; }
+        .target-icon { font-size: 1.5rem; }
+        .target-name { font-size: 0.8rem; font-weight: 600; color: #36597A; margin-top: 5px; }
+        @media print { body { background: white; padding: 0; } }
+        #purchasePopup { display: none; }
+        
+        .preview-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #36597A, #2a4a66);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .preview-btn:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, #2a4a66, #36597A);
+        }
+        
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .modal-overlay.show { display: block; }
+        
+        .modal-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .modal-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #CFA58C;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 2001;
+        }
+        .modal-close:hover { background: #b8956f; }
+        
+        .modal-header {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+        }
+        .modal-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .preview-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .preview-card-header {
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+        }
+        .preview-card-header h4 { font-size: 0.95rem; font-weight: 600; }
+        .preview-card-header span { font-size: 2rem; }
+        .preview-image {
+            height: 220px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .preview-card-body {
+            padding: 15px 20px;
+        }
+        .preview-card-body p {
+            color: #64748b;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+        .locked-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .modal-footer {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .modal-cta {
+            background: linear-gradient(135deg, #CFA58C, #b8956f);
+            padding: 25px 40px;
+            border-radius: 16px;
+            display: inline-block;
+        }
+        .modal-cta h3 { color: white; font-size: 1.3rem; margin-bottom: 8px; }
+        .modal-cta .price { color: white; font-size: 2rem; font-weight: 700; }
+        .modal-cta .note { color: rgba(255,255,255,0.9); font-size: 0.85rem; margin-top: 8px; }
+        
+        .purchase-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            max-width: 320px;
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .popup-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .popup-content { flex: 1; }
+        .popup-name { font-weight: 600; color: #333; font-size: 0.9rem; }
+        .popup-text { color: #64748b; font-size: 0.75rem; }
+        .popup-time { color: #22c55e; font-size: 0.7rem; font-weight: 600; }
+        .popup-location { color: #94a3b8; font-size: 0.7rem; }
+        
+        .urgent-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background: #ef4444;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border: 2px solid #ef4444;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .countdown-box .label { color: #dc2626; font-size: 0.85rem; font-weight: 600; }
+        .countdown-box .text { color: #991b1b; font-size: 0.9rem; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    
+    <!-- Purchase Popup -->
+    <div id="purchasePopup" style="display: none !important; position: fixed; bottom: 20px; right: 20px; background: #fff; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 15px; z-index: 1000; max-width: 320px; width: 280px;">
+        <div class="urgent-badge">JUST NOW</div>
+        <div class="popup-avatar" id="popupAvatar">K</div>
+        <div class="popup-content">
+            <div class="popup-name" id="popupName">Kenneth M.</div>
+            <div class="popup-text">just purchased</div>
+            <div class="popup-text"><strong>Rental Checklist Complete Kit</strong></div>
+            <div class="popup-time popup-location">📍 Manila</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Philippine Rental Checklist</h1>
+            <p>The Complete Toolkit for Landlords, Tenants & Agents</p>
+            <div class="price-tag">
+                <span class="old-price">₱499</span>
+                ₱99.00
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="pain-header">
+                <p><strong>Stop Losing Money on Rental Disputes!</strong> Whether you're a landlord, tenant, or agent - avoid costly mistakes with this complete Philippine rental guide.</p>
+            </div>
+            
+            <div class="target-box">
+                <div class="target">
+                    <div class="target-icon">👤</div>
+                    <div class="target-name">Landlords</div>
+                </div>
+                <div class="target">
+                    <div class="target-icon">🔑</div>
+                    <div class="target-name">Tenants</div>
+                </div>
+                <div class="target">
+                    <div class="target-icon">📊</div>
+                    <div class="target-name">Agents</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 20px 0 15px; color: #333;">🥅 Solve These Common Problems:</h3>
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">💸</span>
+                    <span class="benefit-text"><strong>Deposit disputes</strong> - Know exactly what's deductible vs normal wear and tear</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">⚖️</span>
+                    <span class="benefit-text"><strong>Legal compliance</strong> - Follow RA 9653 to avoid ₱100k+ fines</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">📋</span>
+                    <span class="benefit-text"><strong>Proper documentation</strong> - Everything in writing, legally binding</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🔔</span>
+                    <span class="benefit-text"><strong>Notice periods</strong> - Know the 30-day and 90-day rules</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🏠</span>
+                    <span class="benefit-text"><strong>Move-in/out process</strong> - Protect your interest at every stage</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">✍️</span>
+                    <span class="benefit-text"><strong>Ready-to-use templates</strong> - Fill in the blanks, print, sign</span>
+                </div>
+            </div>
+            
+            <div class="sections-list">
+                <h3>📋 10 Essential Sections Covered:</h3>
+                <div class="section-item">
+                    <span class="section-num">1</span>
+                    <span class="section-name">Legal Basis & Readiness Check</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">2</span>
+                    <span class="section-name">Move-In Property Inspection</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">3</span>
+                    <span class="section-name">Tenant Screening & Lease Clauses</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">4</span>
+                    <span class="section-name">Security Deposit Rules</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">5</span>
+                    <span class="section-name">Rent Rules & Increases</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">6</span>
+                    <span class="section-name">Utilities & Common Areas</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">7</span>
+                    <span class="section-name">Maintenance & Repairs</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">8</span>
+                    <span class="section-name">Lease Renewal & Termination</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">9</span>
+                    <span class="section-name">Move-Out & Deposit Refund</span>
+                </div>
+                <div class="section-item">
+                    <span class="section-num">10</span>
+                    <span class="section-name">Move-In Documentation</span>
+                </div>
+            </div>
+            
+            <div class="bonus-box">
+                <h3>🎁 BONUS: 5 Ready-to-Use Templates</h3>
+                <ul>
+                    <li>📄 Lease Agreement Cover Page</li>
+                    <li>🏠 Move-In Condition Report</li>
+                    <li>📧 30-Day Termination Notice</li>
+                    <li>💰 Security Deposit Refund Receipt</li>
+                    <li>📈 Rent Increase Notice</li>
+                </ul>
+            </div>
+            
+            <div class="testimonial" style="margin-top: 10px;">
+                <p>"As a first-time landlord, I was so scared of making mistakes. My tenant stayed 8 months without a proper contract - when he left, I had no proof of anything. This checklist saved me. Now I have all my documents in order and I know my rights under RA 9653."</p>
+                <p class="author">— Jonathan, Landlord in Makati</p>
+            </div>
+            <div class="testimonial" style="margin-top: 10px;">
+                <p>"I've been a real estate agent for 5 years and I always used generic contracts from the internet. Clients would always ask questions I couldn't answer. Now I have this toolkit - it makes me look so professional. My clients trust me more!"</p>
+                <p class="author">— Sarah, Real Estate Agent in Cebu</p>
+            </div>
+            <div class="testimonial" style="margin-top: 10px;">
+                <p>"Before this toolkit, I didn't know RA 9653 capped security deposits at only 1 month rent! My previous landlord tried to charge me 3 months - I showed him the law and got my full deposit back."</p>
+                <p class="author">— Maria, Tenant in QC</p>
+            </div>
+            
+            <div class="legal-box">
+                <h4>⚖️ Based on Philippine Law</h4>
+                <ul>
+                    <li>RA 9653 (Rent Control Act of 2009)</li>
+                    <li>RA 11203 (Rent Freeze Extension)</li>
+                    <li>Civil Code of the Philippines (Arts. 1654-1678)</li>
+                </ul>
+            </div>
+            
+            <div class="payment-box">
+                <h3>💳 Get Instant Access</h3>
+                <div class="gcash-details">
+                    <p>Pay only <strong>₱99.00</strong> via GCash</p>
+                    <div class="gcash-number">09998830291</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">📝 Simple 3-Step Process:</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Send <strong>₱99.00</strong> to GCash <strong>09998830291</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Take a screenshot of your payment</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Fill the form below - get files in 1-5 minutes! (After we verify your payment)</div>
+                </div>
+            </div>
+            
+            <div class="countdown-box">
+                <div class="label">🔥 47 people are viewing this page right now</div>
+                <div class="text">Limited time offer - Price increases soon!</div>
+            </div>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSedx7j4ZLR9Bh18c7HDNRYxuEE29JJoOiBZlvgUomJMP0ASrg/viewform" class="form-link" target="_blank">[CLICK TO SUBMIT PAYMENT PROOF]</a>
+            
+            <div class="guarantee">
+                <p><strong>🛡️ 100% Satisfaction Guarantee:</strong> If you're not satisfied with the content, message me and I'll refund your ₱99. No questions asked.</p>
+            </div>
+            
+            <a href="#" class="preview-btn" onclick="openPreview(); return false;">👁️ Preview All Files</a>
+        </div>
+    </div>
+    
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="previewModal">
+        <button class="modal-close" onclick="closePreview()">✕ Close Preview</button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>👁️ Preview All Files</h2>
+                <p>See what you'll get - content is blurred for security</p>
+            </div>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #36597A, #CFA58C);">
+                        <span>📋</span>
+                        <h4>Main Checklist</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/X5ARRfg.jpg" alt="Checklist Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 10 Sections</span>
+                        <p>Interactive checklist with legal references, checkboxes, and ready-to-use forms</p>
+                    </div>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <span>📄</span>
+                        <h4>Lease Agreement</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/CLjp2b4.jpg" alt="Lease Agreement Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 Template</span>
+                        <p>Fill-in-the-blanks lease agreement with all essential clauses under RA 9653</p>
+                    </div>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                        <span>🏠</span>
+                        <h4>Move-In Report</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/lqJ1ssZ.jpg" alt="Move-In Report Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 Template</span>
+                        <p>Room-by-room inspection with condition ratings and meter readings</p>
+                    </div>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #f857a6, #ff5858);">
+                        <span>📧</span>
+                        <h4>Termination Notice</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/FR6hYdd.jpg" alt="Termination Notice Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 Template</span>
+                        <p>30-day notice template with legal references and checklist</p>
+                    </div>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #5ee7df, #b490ca);">
+                        <span>💰</span>
+                        <h4>Deposit Refund</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/P1zAMhP.jpg" alt="Deposit Refund Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 Template</span>
+                        <p>Official receipt with itemized deductions and acknowledgment</p>
+                    </div>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-card-header" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <span>📈</span>
+                        <h4>Rent Increase Notice</h4>
+                    </div>
+                    <div class="preview-image">
+                        <img src="https://i.imgur.com/zO3D5zG.jpg" alt="Rent Increase Notice Preview" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="preview-card-body">
+                        <span class="locked-badge">🔒 Template</span>
+                        <p>90-day notice compliant with RA 9653 rent increase rules</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSedx7j4ZLR9Bh18c7HDNRYxuEE29JJoOiBZlvgUomJMP0ASrg/viewform" target="_blank" style="text-decoration: none;">
+                    <div class="modal-cta" style="cursor: pointer;">
+                        <h3>Get Full Access</h3>
+                        <div class="price">₱99 Only</div>
+                        <div class="note">Click here to pay and get download link</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const names = [
+            { name: "Kenneth M.", loc: "Manila" },
+            { name: "Renz D.", loc: "Quezon City" },
+            { name: "Vince T.", loc: "Makati" },
+            { name: "Bryce A.", loc: "Cebu City" },
+            { name: "Aldrich P.", loc: "BGC, Taguig" },
+            { name: "Jared S.", loc: "Pasig" },
+            { name: "Tristan L.", loc: "Mandaluyong" },
+            { name: "Jasper K.", loc: "Alabang" },
+            { name: "Axel M.", loc: "Ortigas" },
+            { name: "Devon R.", loc: "Taguig" },
+            { name: "Sean D.", loc: "Muntinlupa" },
+            { name: "Prince J.", loc: "Las Piñas" },
+            { name: "Karl B.", loc: "Marikina" },
+            { name: "Neil C.", loc: "Caloocan" },
+            { name: "Russel T.", loc: "Navotas" },
+            { name: "Alden M.", loc: "Davao City" },
+            { name: "Rommel F.", loc: "Cagayan de Oro" },
+            { name: "Greg S.", loc: "Iloilo City" },
+            { name: "Nico R.", loc: "Bacolod City" },
+            { name: "Jerome T.", loc: "Dumaguete" },
+            { name: "Wesley L.", loc: "Dagupan" },
+            { name: "Andy K.", loc: "Santa Rosa" },
+            { name: "Jomari B.", loc: "Lipa City" },
+            { name: "Kian C.", loc: "Imus" },
+            { name: "Mark D.", loc: "Cabanatuan" },
+            { name: "Riley A.", loc: "General Santos" },
+            { name: "Chester R.", loc: "Zamboanga" },
+            { name: "Dexter L.", loc: "Butuan" },
+            { name: "Francis K.", loc: "Tacloban City" },
+            { name: "Ivan M.", loc: "Puerto Princesa" }
+        ];
+        
+        function showPopup() {
+            var popup = document.getElementById('purchasePopup');
+            if (!popup) {
+                alert('Popup element not found!');
+                return;
+            }
+            var randomPerson = names[Math.floor(Math.random() * names.length)];
+            
+            document.getElementById('popupName').textContent = randomPerson.name;
+            document.getElementById('popupAvatar').textContent = randomPerson.name.charAt(0);
+            var locationEl = document.querySelector('.popup-location');
+            if (locationEl) {
+                locationEl.textContent = '📍 ' + randomPerson.loc;
+            }
+            
+            popup.setAttribute('style', 'display: flex !important; position: fixed; bottom: 20px; right: 20px; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 15px; z-index: 1000; max-width: 320px;');
+            
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 6000);
+        }
+        
+        setTimeout(showPopup, 1500);
+        setInterval(showPopup, 10000);
+        
+        function openPreview() {
+            document.getElementById('previewModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePreview() {
+            document.getElementById('previewModal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePreview();
+            }
+        });
+    </script>
+</body>
+</html>

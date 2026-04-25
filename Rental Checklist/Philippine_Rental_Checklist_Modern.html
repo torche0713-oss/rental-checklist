@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Rental Checklist - Modern Infographic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid;
+            border-image: linear-gradient(135deg, #ff6b6b, #feca57) 1;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            position: relative;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header .subtitle {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 15px;
+            position: relative;
+        }
+        
+        .whats-inside {
+            background: linear-gradient(135deg, #36597A, #2a4a66);
+            padding: 25px 30px;
+        }
+        
+        .whats-inside h2 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+.section-item {
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            color: #333;
+        }
+        .section-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .section-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .section-item a:hover {
+            color: #667eea;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 2px dashed #eee;
+            scroll-margin-top: 20px;
+        }
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #36597A, #2a4a66);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            color: #feca57;
+        }
+        
+        .section-item:hover {
+            transform: translateX(5px);
+        }
+        
+.for-who {
+            background: linear-gradient(135deg, #36597A, #2a4a66);
+            padding: 25px 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .for-who-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 12px;
+            color: white;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .for-who-box {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s;
+        }
+        
+        .for-who-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .for-who-box .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .for-who-box h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 2px dashed #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+        
+        .section-title {
+            flex: 1;
+        }
+        
+        .section-title h2 {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 3px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9f0 0%, #fef3e2 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box strong {
+            color: #d97706;
+        }
+        
+        .checklist {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .check-item:hover {
+            background: #f1f5f9;
+            transform: translateX(3px);
+        }
+        
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #cbd5e1;
+            border-radius: 6px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-top: 2px;
+        }
+        
+        .check-item.checked .checkbox {
+            background: #10b981;
+            border-color: #10b981;
+        }
+        
+        .check-item.checked .checkbox::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .check-item.checked .check-text {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+        
+        .check-text {
+            color: #334155;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .check-text strong {
+            color: #1e293b;
+        }
+        
+        .red-flag {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+        
+        .red-flag .warning {
+            color: #dc2626;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .red-flag p {
+            color: #991b1b;
+            font-size: 0.9rem;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .column-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .column-card h3 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+        
+        .column-card.landlord h3 {
+            color: #7c3aed;
+            border-color: #7c3aed;
+        }
+        
+        .column-card.tenant h3 {
+            color: #059669;
+            border-color: #059669;
+        }
+        
+        .template-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border: 2px solid #0ea5e9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        
+        .template-box h4 {
+            color: #0369a1;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .template-content {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        .bonus-section {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            padding: 30px;
+        }
+        
+        .bonus-section h2 {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+        
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .bonus-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            transition: transform 0.3s;
+        }
+        
+        .bonus-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .bonus-item .number {
+            background: #fbbf24;
+            color: #1e1b4b;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .bonus-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        
+        .bonus-item p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            transition: transform 0.3s;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .print-btn {
+                display: none;
+            }
+            .check-item {
+                break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-grid, .two-column, .bonus-grid, .for-who {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Philippine Rental Checklist</h1>
+            <p class="subtitle">Landlord, Tenant & Agent's Essential Guide</p>
+            <span class="badge">📋 10 Sections + Bonus Templates</span>
+        </div>
+        
+        <div class="whats-inside" id="whats-inside">
+            <h2>📑 What's Inside</h2>
+            <div class="section-grid">
+                <a href="#section1" class="section-item" style="color: #fff;">Section 1 — Before the Lease: Legal Basis</a>
+                <a href="#section2" class="section-item" style="color: #fff;">Section 2 — Property Inspection Report</a>
+                <a href="#section3" class="section-item" style="color: #fff;">Section 3 — Lease Agreement Clauses</a>
+                <a href="#section4" class="section-item" style="color: #fff;">Section 4 — Security Deposit Rules</a>
+                <a href="#section5" class="section-item" style="color: #fff;">Section 5 — Rent Rules & Due Dates</a>
+                <a href="#section6" class="section-item" style="color: #fff;">Section 6 — Utilities & Common Areas</a>
+                <a href="#section7" class="section-item" style="color: #fff;">Section 7 — Maintenance & Repairs</a>
+                <a href="#section8" class="section-item" style="color: #fff;">Section 8 — Renewal & Termination</a>
+                <a href="#section9" class="section-item" style="color: #fff;">Section 9 — Move-Out & Refund</a>
+                <a href="#section10" class="section-item" style="color: #fff;">Section 10 — Move-In Documentation</a>
+                <a href="#bonus-section" class="section-item" style="color: #feca57; font-weight: 600;">🎁 Bonus: 5 Ready-to-Use Templates</a>
+            </div>
+        </div>
+        
+        <div class="for-who">
+            <div class="for-who-box">
+                <div class="icon">👤</div>
+                <h3>Landlords & Property Owners</h3>
+            </div>
+            <div class="for-who-box">
+                <div class="icon">🔑</div>
+                <h3>Tenants</h3>
+            </div>
+            <div class="for-who-box">
+                <div class="icon">📊</div>
+                <h3>Real Estate Agents</h3>
+            </div>
+        </div>
+        
+        <!-- SECTION 1 -->
+        <div class="section" id="section1">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #667eea, #764ba2);">1</div>
+                <div class="section-title">
+                    <h2>Before the Lease: Legal Basis & Readiness</h2>
+                    <p>Know the Law: RA 9653 (Rent Control Act of 2009)</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>💡 Legal Basis:</strong> RA 9653 governs residential leases in the Philippines. Extended by RA 11203. Covers properties with monthly rent up to PHP 100,000.
+            </div>
+            
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Owner has proven legal ownership</strong> (title, tax declaration, or deed of absolute sale)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Property has valid Tax Declaration</strong> from Municipal/City Assessor</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>For condos:</strong> Certificate of Title (CCT) available and not encumbered</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>No pending legal disputes, mortgage, or lien</strong> — get Certified True Copy of Title</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Owner has valid government-issued ID</strong> for identity verification</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>If managed by agent:</strong> written authorization and DRP card verified</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 20px 0 15px; color: #333;">Property Readiness Check</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Water, electricity, gas</strong> connections active and transferred to owner</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Unit/house is clean</strong> and in livable condition per RA 9653</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>All appliances tested</strong> and working (or noted as-is in writing)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Keys, access cards, remotes, parking passes</strong> accounted for</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Previous tenant fully vacated</strong> and surrendered possession</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Meets habitability standards:</strong> plumbing, structural integrity, ventilation</div>
+                </div>
+            </div>
+            
+            <div class="red-flag">
+                <div class="warning">🚩 RED FLAG</div>
+                <p>If the owner cannot produce a title or refuses to show proof of ownership — do NOT proceed. This is the #1 sign of a scam.</p>
+            </div>
+            <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 2 -->
+        <div class="section" id="section2">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #11998e, #38ef7d);">2</div>
+                <div class="section-title">
+                    <h2>Property Inspection: Move-In Condition Report</h2>
+                    <p>Document everything to avoid deposit disputes</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>💡 Why It Matters:</strong> A thorough move-in inspection protects BOTH parties. Without documented evidence, disputes over security deposit deductions become impossible to resolve.
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">Room-by-Room Checklist</h3>
+            <div class="two-column">
+                <div class="column-card">
+                    <h3>🛋️ Living Room</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Walls, ceiling, floors</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Windows, doors</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Light fixtures, switches, outlets</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-card">
+                    <h3>🛏️ Bedrooms</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Closet, walls, flooring</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Aircon unit</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Windows, ceiling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-card">
+                    <h3>🍳 Kitchen</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Counter, cabinets</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Sink, faucet, stove</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Exhaust, refrigerator</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-card">
+                    <h3>🚿 Bathroom(s)</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Toilet, shower, sink</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Tiles, water pressure</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Drainage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 20px 0 15px; color: #333;">⚡ Meter Readings at Move-In</h3>
+            <div class="checklist" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Electricity (Meralco):</strong> Previous _____ Current _____</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Water (Maynilad/MDWSS):</strong> Previous _____ Current _____</div>
+                </div>
+            </div>
+            
+            <div class="red-flag" style="margin-top: 20px; background: #dcfce7; border-color: #22c55e;">
+                <div class="warning" style="color: #16a34a;">✅ Critical</div>
+                <p style="color: #166534;">Both owner/agent AND tenant MUST sign the Move-In Condition Report. Keep the original; give tenant a copy. This is your legal shield against false damage claims.</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 3 -->
+        <div class="section" id="section3">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #f093fb, #f5576c);">3</div>
+                <div class="section-title">
+                    <h2>Tenant Screening & Essential Lease Clauses</h2>
+                    <p>10 checks most landlords skip</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">Tenant Screening Checklist</h3>
+            <div class="checklist" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Government-issued ID (2 valid IDs)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Employment/business verification letter</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Income to rent ratio (3x rule)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Credit bureau check (CIC)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Previous landlord reference</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Background check: criminal records</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Online presence & social media review</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Co-maker or guarantor arrangement</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Intention to use (residential vs commercial)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Proof of billing address</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 25px 0 15px; color: #333;">📝 Essential Clauses Every Philippine Lease Must Have</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Full names, addresses, valid IDs</strong> of ALL parties (owner AND tenant)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Complete property address</strong> with specific unit/house number</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Exact lease duration:</strong> start date AND end date</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Monthly rent in figures AND words</strong> (e.g., PHP 18,000 — Eighteen Thousand Pesos)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Mode of payment:</strong> bank transfer details or GCash</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Due date:</strong> specific day of month (e.g., 5th)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Security deposit:</strong> max 1 month rent per RA 9653</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Advance rental</strong> (typically 1 month) — non-refundable</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Purpose of lease:</strong> residential only</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Occupancy limit:</strong> max persons allowed</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Quiet enjoyment clause</strong> — tenant right to peaceful possession</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Subleasing clause:</strong> prohibited or requires written consent</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Termination clause:</strong> grounds and notice period</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Penalty clause:</strong> e.g., 5% interest per month on overdue rent</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Force majeure clause:</strong> floods, earthquakes, pandemics</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Governing law:</strong> laws of the Republic of the Philippines</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Signatures of witnesses</strong> and notarization (strongly recommended)</div>
+                </div>
+            </div>
+            
+            <div class="template-box" style="margin-top: 20px;">
+                <h4>📌 Notarization Tip</h4>
+                <p style="color: #0369a1; font-size: 0.9rem;">A notarized lease carries more legal weight and is admissible in court. Get your lease notarized — it costs small but protects a lot.</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 4 -->
+        <div class="section" id="section4">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">4</div>
+                <div class="section-title">
+                    <h2>Security Deposit: Rules, Limits & Documentation</h2>
+                    <p>RA 9653 Rule: Maximum 1 month rent</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="background: #f0fdf4; border-color: #22c55e;">
+                <strong>⚖️ Legal Limit:</strong> The security deposit shall NOT exceed one (1) month rent for residential properties. Any provision requiring more than this is void and unenforceable.
+            </div>
+            
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Deposit amount clearly stated</strong> in lease (maximum 1 month rent)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Purpose stated:</strong> security against unpaid rent, damages, violations</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Separate bank account:</strong> owner must place deposit in interest-bearing account</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Official receipt issued</strong> upon payment of deposit</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Condition documented</strong> with photos + signed Move-In Report</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Written inventory</strong> of all items included (furniture, appliances, fixtures)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Return clause:</strong> deposit returned within 30 days after move-out</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Itemized deduction list</strong> provided if any amount withheld</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Tenant forwarding address</strong> provided for refund delivery</div>
+                </div>
+            </div>
+            
+            <div class="red-flag" style="margin-top: 20px; background: #fef3c7; border-color: #f59e0b;">
+                <div class="warning" style="color: #d97706;">⚠️ Important</div>
+                <p style="color: #92400e;">The deposit is NOT rent. It must be kept separate by the owner and returned in full at the end of the lease, minus lawful deductions.</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 5 -->
+        <div class="section" id="section5">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">5</div>
+                <div class="section-title">
+                    <h2>Rent Rules: Rates, Increases & Due Dates</h2>
+                    <p>9 steps before keys are handed over</p>
+                </div>
+            </div>
+            
+            <div class="checklist" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Video walk-through</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Photo inventory</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Meter readings log</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Keys inventory</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Parking slot assignment</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">HOA rules briefing</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Checklist signed</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Emergency contacts</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">WiFi setup</div>
+                </div>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 6 -->
+        <div class="section" id="section6">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #fa709a, #fee140);">6</div>
+                <div class="section-title">
+                    <h2>Utilities & Common Areas: Who Pays What</h2>
+                    <p>Clear lines prevent disputes</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">💡 Utility Responsibility Checklist</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Electricity:</strong> Tenant pays from move-in date (meter reading recorded)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Water:</strong> Tenant pays from move-in date</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Gas/LPG:</strong> Tenant pays; note initial tank condition</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Internet/DSL/Cable:</strong> Tenant arranges and pays directly</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>HOA dues:</strong> Clarify if included in rent or paid separately</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Meralco installation/connection fees:</strong> Who is responsible</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Prepaid vs. postpaid meter:</strong> Confirm type and expectations</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 25px 0 15px; color: #333;">🏢 Common Area Responsibilities</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Garbage collection:</strong> Who arranges and pays</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Parking:</strong> Designated slot clearly stated; extra slots paid separately</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Elevator maintenance:</strong> Covered by HOA</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Hallway cleaning:</strong> Covered by HOA or building management</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Pest control:</strong> Who is responsible</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Building insurance:</strong> Owner covers structural; tenant covers contents</div>
+                </div>
+            </div>
+            
+            <div class="red-flag" style="margin-top: 20px;">
+                <div class="warning">⚠️ Warning</div>
+                <p>Do not allow tenant to make unauthorized modifications to utility connections. This can cause disputes and safety hazards.</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 7 -->
+        <div class="section" id="section7">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">7</div>
+                <div class="section-title">
+                    <h2>Maintenance & Repairs: Responsibilities</h2>
+                    <p>Civil Code Article 1654</p>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-card landlord">
+                    <h3>👤 Landlord Responsibilities</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Structural repairs: walls, ceiling, roof, flooring</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Plumbing: major leaks, sewer, water heater</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Electrical: main wiring, breakers, outlets</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Aircon: major repair due to normal wear</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Pest infestation (pre-existing)</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Paint at start of new lease</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Security issues: locks, windows, gates</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-card tenant">
+                    <h3>🔑 Tenant Responsibilities</h3>
+                    <div class="checklist">
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Minor repairs: leaky faucets (under PHP 1,000)</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Replacement: light bulbs, fuses, batteries</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Damage caused by tenant, guests, pets</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Cleaning and general upkeep</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Aircon maintenance (every 3-6 months)</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Blocked drains from misuse</div>
+                        </div>
+                        <div class="check-item" onclick="this.classList.toggle('checked')">
+                            <div class="checkbox"></div>
+                            <div class="check-text">Report repairs within 24-48 hours</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-box" style="margin-top: 20px; background: #f0fdf4; border-color: #22c55e;">
+                <h4 style="color: #166534;">✅ Golden Rule</h4>
+                <p style="color: #166534;">Normal wear and tear is NOT tenant damage. A 2-year-old carpet showing foot traffic = normal wear. A hole in the wall from removing tape = tenant damage. Document everything at move-in!</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 8 -->
+        <div class="section" id="section8">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #f857a6, #ff5858);">8</div>
+                <div class="section-title">
+                    <h2>Lease Renewal & Termination: Notice Requirements</h2>
+                    <p>Know Your Deadlines</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">⏰ Before Lease Expires — Actions to Take</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Notify tenant 90 days before</strong> of intention to renew or not renew (per RA 9653 IRR)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>If raising rent:</strong> give 90 days written notice</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Joint inspection</strong> 30 days before move-out</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Review security deposit</strong> and prepare deduction list</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Give tenant time</strong> to cure any lease violations</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 25px 0 15px; color: #333;">⚖️ Termination Clauses and Grounds</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Non-payment of rent</strong> for 30 days after due date</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Violation of lease terms:</strong> unauthorized occupants, pets, subleasing</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Major damage</strong> caused by tenant or guests</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Owner needs property</strong> for personal use (requires notice)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Illegal activities</strong> conducted on premises</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 25px 0 15px; color: #333;">📅 Holdover Tenant Rules</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">If tenant remains after lease expiry, they become <strong>month-to-month tenant</strong></div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>30 days notice</strong> required from either party</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Cannot simply change locks</strong> — must follow legal eviction</div>
+                </div>
+            </div>
+            
+            <div class="red-flag" style="margin-top: 20px;">
+                <div class="warning">🚫 Legal Eviction Only</div>
+                <p>No matter how justified, never attempt self-help eviction (changing locks, cutting utilities, removing belongings). Always go through the courts.</p>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- SECTION 9 -->
+        <div class="section" id="section9">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #5ee7df, #b490ca);">9</div>
+                <div class="section-title">
+                    <h2>Move-Out & Security Deposit Refund</h2>
+                    <p>The Right Process</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 15px; color: #333;">📦 Move-Out Procedures Checklist</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Joint move-out inspection</strong> with owner/agent AND tenant present</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Compare condition</strong> against Move-In Report (Section 2)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Photograph and document</strong> all areas — both keep copies</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>All keys, access cards, remotes</strong> returned to owner</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Final meter readings</strong> recorded (electricity, water)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Outstanding utility bills</strong> settled before move-out</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Rent owed</strong> for final month settled</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>No items</strong> belonging to tenant left in property</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Tenant forwarding address</strong> provided in writing</div>
+                </div>
+            </div>
+            
+            <h3 style="margin: 25px 0 15px; color: #333;">💰 Security Deposit Refund Process</h3>
+            <div class="checklist">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Calculate deposit:</strong> starting amount less lawful deductions</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Prepare itemized list</strong> of all deductions with cost estimates</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Deductions must be for:</strong> unpaid rent, damages beyond normal wear</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Normal wear and tear</strong> CANNOT be deducted</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Refund within 30 days</strong> from move-out date (per RA 9653)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Use traceable payment:</strong> bank transfer preferred</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text"><strong>Obtain signed acknowledgment</strong> when refund delivered</div>
+                </div>
+            </div>
+            
+            <div class="template-box" style="margin-top: 20px;">
+                <h4>📊 Normal Wear vs. Tenant Damage</h4>
+                <p><strong>Faded paint</strong> = normal wear (owner pays). <strong>Holes in wall</strong> = tenant damage (deduct). <strong>Mold from poor ventilation</strong> = structural issue (owner pays). The Move-In Report is your best evidence!</p>
+            </div>
+        </div>
+        
+        <!-- SECTION 10 -->
+        <div class="section" id="section10">
+            <div class="section-header">
+                <div class="section-number" style="background: linear-gradient(135deg, #36597A, #2a4a66);">10</div>
+                <div class="section-title">
+                    <h2>Move-In Documentation</h2>
+                    <p>9 steps before keys are handed over</p>
+                </div>
+            </div>
+            <div class="checklist" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Video walk-through (all rooms + exterior)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Photo inventory of walls, floors, fixtures</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Meter readings log (electricity + water)</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Keys and access device inventory</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Parking slot assignment</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">HOA rules and amenity access briefing</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Move-in checklist signed by both parties</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">Emergency contact list exchange</div>
+                </div>
+                <div class="check-item" onclick="this.classList.toggle('checked')">
+                    <div class="checkbox"></div>
+                    <div class="check-text">WiFi and utility account setup confirmation</div>
+                </div>
+            </div>
+        <a href="#whats-inside" class="back-to-top">↑ Back to What's Inside</a>
+        </div>
+        
+        <!-- BONUS SECTION -->
+        <div class="bonus-section" id="bonus-section">
+            <h2>🎁 5 Ready-to-Use Philippine Rental Templates</h2>
+            <div class="bonus-grid">
+                <div class="bonus-item" onclick="window.open('Template1_Lease_Agreement.html', '_blank')" style="cursor: pointer;">
+                    <div class="number">1</div>
+                    <h4>Lease Agreement Cover Page</h4>
+                    <p>Complete template with all essential fields for owner and tenant details</p>
+                    <p style="margin-top: 10px; color: #fbbf24; font-weight: 600;">🖱️ Click to Open</p>
+                </div>
+                <div class="bonus-item" onclick="window.open('Template2_Move_In_Report.html', '_blank')" style="cursor: pointer;">
+                    <div class="number">2</div>
+                    <h4>Move-In Condition Report</h4>
+                    <p>Room-by-room inspection checklist with condition ratings and meter readings</p>
+                    <p style="margin-top: 10px; color: #fbbf24; font-weight: 600;">🖱️ Click to Open</p>
+                </div>
+                <div class="bonus-item" onclick="window.open('Template3_Termination_Notice.html', '_blank')" style="cursor: pointer;">
+                    <div class="number">3</div>
+                    <h4>30-Day Lease Termination Notice</h4>
+                    <p>Formal notice template for ending lease with proper documentation</p>
+                    <p style="margin-top: 10px; color: #fbbf24; font-weight: 600;">🖱️ Click to Open</p>
+                </div>
+                <div class="bonus-item" onclick="window.open('Template4_Deposit_Refund.html', '_blank')" style="cursor: pointer;">
+                    <div class="number">4</div>
+                    <h4>Security Deposit Refund Receipt</h4>
+                    <p>Official receipt with itemized deductions and acknowledgment</p>
+                    <p style="margin-top: 10px; color: #fbbf24; font-weight: 600;">🖱️ Click to Open</p>
+                </div>
+                <div class="bonus-item" onclick="window.open('Template5_Rent_Increase.html', '_blank')" style="cursor: pointer;">
+                    <div class="number">5</div>
+                    <h4>Rent Increase Notice Template</h4>
+                    <p>Formal 90-day notice template for rent adjustment with legal compliance</p>
+                    <p style="margin-top: 10px; color: #fbbf24; font-weight: 600;">🖱️ Click to Open</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>

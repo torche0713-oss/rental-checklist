@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Pain Points - Infographic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .landlord .section-icon { background: linear-gradient(135deg, #ef4444, #f97316); }
+        .landlord .section-title { color: #fca5a5; }
+        
+        .tenant .section-icon { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+        .tenant .section-title { color: #93c5fd; }
+        
+        .agent .section-icon { background: linear-gradient(135deg, #22c55e, #84cc16); }
+        .agent .section-title { color: #86efac; }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .pain-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pain-number {
+            background: rgba(255,255,255,0.2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .pain-title {
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        
+        .pain-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .cta h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .cta p {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        
+        .cta-small {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .pain-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔑 Rental Pain Points</h1>
+            <p>Why Landlords, Tenants & Agents Need This Checklist</p>
+        </div>
+        
+        <!-- LANDLORDS -->
+        <div class="section landlord">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <div class="section-title">For Landlords</div>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-number">1</div>
+                    <div class="pain-title">💸 Late/Non-Payment</div>
+                    <div class="pain-desc">Tenants pay late or not at all - affects income for bills and loans</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">2</div>
+                    <div class="pain-title">🔐 Deposit Disputes</div>
+                    <div class="pain-desc">Tenants dispute deductions, refuse to leave, or claim false damage</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">3</div>
+                    <div class="pain-title">⚖️ Illegal Rent Increases</div>
+                    <div class="pain-desc">Unaware of RA 9653 caps - risk fines or legal action</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">4</div>
+                    <div class="pain-title">🏠 Property Damage</div>
+                    <div class="pain-desc">Tenants cause damage beyond normal wear and tear</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">5</div>
+                    <div class="pain-title">🚪 Holdover Tenants</div>
+                    <div class="pain-desc">Tenant refuses to vacate after lease ends</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">6</div>
+                    <div class="pain-title">📝 No Documentation</div>
+                    <div class="pain-desc">No written contracts, no receipts - can't prove cases</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TENANTS -->
+        <div class="section tenant">
+            <div class="section-header">
+                <div class="section-icon">🔑</div>
+                <div class="section-title">For Tenants</div>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-number">1</div>
+                    <div class="pain-title">📈 Unexpected Rent Hikes</div>
+                    <div class="pain-desc">Landlords raise rent without proper notice or reason</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">2</div>
+                    <div class="pain-title">💰 Deposit Not Returned</div>
+                    <div class="pain-desc">Landlords refuse to return security deposit</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">3</div>
+                    <div class="pain-title">❌ Illegal Deductions</div>
+                    <div class="pain-desc">Deductions for "normal wear and tear" that shouldn't apply</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">4</div>
+                    <div class="pain-title">🏚️ Poor Property Conditions</div>
+                    <div class="pain-desc">Mold, plumbing issues, structural problems ignored</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">5</div>
+                    <div class="pain-title">🚫 Unfair Eviction</div>
+                    <div class="pain-desc">Kicked out without notice or proper reason</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">6</div>
+                    <div class="pain-title">📄 No Proper Contract</div>
+                    <div class="pain-desc">Verbal agreements lead to disputes with no proof</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AGENTS -->
+        <div class="section agent">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <div class="section-title">For Real Estate Agents</div>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-number">1</div>
+                    <div class="pain-title">📋 Client Disputes</div>
+                    <div class="pain-desc">Both landlord and tenant complain about the process</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">2</div>
+                    <div class="pain-title">📝 No Standard Templates</div>
+                    <div class="pain-desc">Create new documents for each transaction</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">3</div>
+                    <div class="pain-title">⚖️ Legal Compliance</div>
+                    <div class="pain-desc">Unfamiliar with RA 9653 requirements</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">4</div>
+                    <div class="pain-title">⏰ Time-Consuming</div>
+                    <div class="pain-desc">Manual paperwork takes hours to prepare</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">5</div>
+                    <div class="pain-title">💼 Professional Credibility</div>
+                    <div class="pain-desc">Need better tools to impress clients</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-number">6</div>
+                    <div class="pain-title">📁 Documentation Gaps</div>
+                    <div class="pain-desc">Missing signatures, incomplete forms</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="cta">
+                <h3>Stop Losing Money on Disputes!</h3>
+                <p>₱99 Only</p>
+                <div class="cta-small">Philippine Rental Agreement Checklist + 5 Templates</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

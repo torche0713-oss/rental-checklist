@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move-In Condition Report Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #36597A, #1a1a2e); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #36597A, #CFA58C); padding: 30px; text-align: center; color: white; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 0.9rem; }
+        .content { padding: 30px; }
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.9rem; }
+        .room-section { margin: 20px 0; }
+        .room-title { background: #f8fafc; padding: 12px 15px; border-radius: 10px; font-weight: 700; color: #11998e; margin-bottom: 15px; border-left: 4px solid #11998e; }
+        .condition-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 15px; }
+        .condition-option { display: flex; align-items: center; gap: 8px; padding: 10px; background: #f8fafc; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+        .condition-option:hover { background: #e2e8f0; }
+        .condition-option input { width: 18px; height: 18px; }
+        .condition-option span { font-size: 0.85rem; color: #475569; }
+        .notes { width: 100%; padding: 10px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.85rem; min-height: 60px; }
+        .meter-section { background: #f0fdf4; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .meter-section h3 { color: #166534; margin-bottom: 15px; }
+        .meter-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        .meter-row .form-group label { font-size: 0.85rem; }
+        .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .signature-box { text-align: center; padding: 20px; background: #f8fafc; border-radius: 12px; }
+        .signature-line { border-bottom: 2px solid #333; height: 40px; margin-bottom: 10px; }
+        .signature-box p { font-size: 0.8rem; color: #64748b; }
+        .print-btn { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+        .back-btn { position: fixed; bottom: 30px; left: 30px; background: #475569; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-size: 0.9rem; cursor: pointer; }
+        @media print { body { background: white; padding: 0; } .print-btn, .back-btn { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 MOVE-IN CONDITION REPORT</h1>
+            <p>Philippine Rental Property Inspection</p>
+        </div>
+        <div class="content">
+            <div class="info-row">
+                <div class="form-group">
+                    <label>Property Address:</label>
+                    <input type="text" placeholder="[COMPLETE PROPERTY ADDRESS]">
+                </div>
+                <div class="form-group">
+                    <label>Inspection Date:</label>
+                    <input type="text" placeholder="[DATE]">
+                </div>
+            </div>
+            
+            <div class="info-row">
+                <div class="form-group">
+                    <label>Tenant Name:</label>
+                    <input type="text" placeholder="[TENANT NAME]">
+                </div>
+                <div class="form-group">
+                    <label>Owner/Agent Name:</label>
+                    <input type="text" placeholder="[OWNER/AGENT NAME]">
+                </div>
+            </div>
+            
+            <div class="room-section">
+                <div class="room-title">🛋️ Living Room</div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="lr_walls"><span>Walls - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="lr_walls"><span>Walls - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="lr_walls"><span>Walls - Damaged</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="lr_floor"><span>Floors - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="lr_floor"><span>Floors - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="lr_floor"><span>Floors - Damaged</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Light Fixtures</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Switches/Outlets</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Windows/Doors</span></label>
+                </div>
+                <textarea class="notes" placeholder="Notes: _____________________________________________"></textarea>
+            </div>
+            
+            <div class="room-section">
+                <div class="room-title">🛏️ Bedroom 1</div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Closet</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Aircon</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Windows</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="br1_wall"><span>Walls - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="br1_wall"><span>Walls - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="br1_wall"><span>Walls - Damaged</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="br1_floor"><span>Floors - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="br1_floor"><span>Floors - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="br1_floor"><span>Floors - Damaged</span></label>
+                </div>
+                <textarea class="notes" placeholder="Notes: _____________________________________________"></textarea>
+            </div>
+            
+            <div class="room-section">
+                <div class="room-title">🛏️ Bedroom 2</div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Closet</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Aircon</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Windows</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="br2_wall"><span>Walls - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="br2_wall"><span>Walls - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="br2_wall"><span>Walls - Damaged</span></label>
+                </div>
+                <textarea class="notes" placeholder="Notes: _____________________________________________"></textarea>
+            </div>
+            
+            <div class="room-section">
+                <div class="room-title">🍳 Kitchen</div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Counter</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Cabinets</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Sink/Faucet</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Stove</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Exhaust</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Refrigerator</span></label>
+                </div>
+                <textarea class="notes" placeholder="Notes: _____________________________________________"></textarea>
+            </div>
+            
+            <div class="room-section">
+                <div class="room-title">🚿 Bathroom(s)</div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Toilet</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Shower</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Sink</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="radio" name="bath_tile"><span>Tiles - Good</span></label>
+                    <label class="condition-option"><input type="radio" name="bath_tile"><span>Tiles - Fair</span></label>
+                    <label class="condition-option"><input type="radio" name="bath_tile"><span>Tiles - Damaged</span></label>
+                </div>
+                <div class="condition-grid">
+                    <label class="condition-option"><input type="checkbox"><span>Water Pressure OK</span></label>
+                    <label class="condition-option"><input type="checkbox"><span>Drainage OK</span></label>
+                </div>
+                <textarea class="notes" placeholder="Notes: _____________________________________________"></textarea>
+            </div>
+            
+            <div class="meter-section">
+                <h3>⚡ Meter Readings at Move-In</h3>
+                <div class="meter-row">
+                    <div class="form-group">
+                        <label>Electricity (Meralco):</label>
+                        <input type="text" placeholder="[READING]">
+                    </div>
+                    <div class="form-group">
+                        <label>Account No.:</label>
+                        <input type="text" placeholder="[ACCOUNT NO.]">
+                    </div>
+                    <div class="form-group">
+                        <label>Date Read:</label>
+                        <input type="text" placeholder="[DATE]">
+                    </div>
+                </div>
+                <div class="meter-row">
+                    <div class="form-group">
+                        <label>Water (Maynilad):</label>
+                        <input type="text" placeholder="[READING]">
+                    </div>
+                    <div class="form-group">
+                        <label>Account No.:</label>
+                        <input type="text" placeholder="[ACCOUNT NO.]">
+                    </div>
+                    <div class="form-group">
+                        <label>Date Read:</label>
+                        <input type="text" placeholder="[DATE]">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="signatures">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p><strong>Tenant Signature</strong></p>
+                    <p>Name: _______________ Date: _______________</p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p><strong>Owner/Agent Signature</strong></p>
+                    <p>Name: _______________ Date: _______________</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='Philippine_Rental_Checklist_Modern.html'">← Back to Checklist</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>

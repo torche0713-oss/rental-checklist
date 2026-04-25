@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lease Agreement Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #36597A, #1a1a2e); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #36597A, #CFA58C); padding: 30px; text-align: center; color: white; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 0.9rem; }
+        .content { padding: 30px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.9rem; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #667eea; }
+        .form-group textarea { min-height: 80px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .section-title { background: #f8fafc; padding: 15px; border-radius: 10px; margin: 25px 0 15px; font-weight: 700; color: #333; border-left: 4px solid #667eea; }
+        .clauses { background: #f8fafc; padding: 20px; border-radius: 10px; }
+        .clauses ul { list-style: none; }
+        .clauses li { padding: 8px 0; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; color: #475569; }
+        .clauses li:last-child { border-bottom: none; }
+        .clauses li::before { content: "☐"; margin-right: 10px; }
+        .signatures { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .signature-box { text-align: center; }
+        .signature-line { border-bottom: 2px solid #333; height: 50px; margin-bottom: 10px; }
+        .signature-box p { font-size: 0.85rem; color: #64748b; }
+        .print-btn { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4); }
+        .back-btn { position: fixed; bottom: 30px; left: 30px; background: #475569; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-size: 0.9rem; cursor: pointer; }
+        @media print { body { background: white; padding: 0; } .print-btn, .back-btn { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 LEASE AGREEMENT</h1>
+            <p>Philippine Rental Agreement Template</p>
+        </div>
+        <div class="content">
+            <div class="form-group">
+                <label>This LEASE AGREEMENT is entered into on</label>
+                <input type="text" placeholder="[DATE]">
+                <label style="margin-top: 10px;">at</label>
+                <input type="text" placeholder="[CITY], Philippines">
+            </div>
+            
+            <div class="section-title">BY AND BETWEEN</div>
+            
+            <div class="form-group">
+                <label>LANDLORD (Owner):</label>
+                <input type="text" placeholder="[OWNER FULL NAME], of legal age, Filipino, with address at [ADDRESS]">
+            </div>
+            
+            <div class="form-group">
+                <label>TENANT:</label>
+                <input type="text" placeholder="[TENANT FULL NAME], of legal age, Filipino, with address at [ADDRESS]">
+            </div>
+            
+            <div class="form-group">
+                <label>PROPERTY ADDRESS:</label>
+                <input type="text" placeholder="[COMPLETE PROPERTY ADDRESS WITH UNIT NUMBER]">
+            </div>
+            
+            <div class="section-title">TERMS AND CONDITIONS</div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Lease Duration (Start):</label>
+                    <input type="text" placeholder="[START DATE]">
+                </div>
+                <div class="form-group">
+                    <label>Lease Duration (End):</label>
+                    <input type="text" placeholder="[END DATE]">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Monthly Rent (PHP):</label>
+                    <input type="text" placeholder="[AMOUNT]">
+                </div>
+                <div class="form-group">
+                    <label>Security Deposit (PHP):</label>
+                    <input type="text" placeholder="[AMOUNT - Max 1 month rent]">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Mode of Payment:</label>
+                <input type="text" placeholder="[Bank Transfer / GCash - include account details]">
+            </div>
+            
+            <div class="form-group">
+                <label>Due Date:</label>
+                <input type="text" placeholder="[e.g., 5th day of each month]">
+            </div>
+            
+            <div class="section-title">ESSENTIAL CLAUSES CHECKLIST</div>
+            
+            <div class="clauses">
+                <ul>
+                    <li>Purpose of lease: Residential only</li>
+                    <li>Maximum occupancy: ____ persons</li>
+                    <li>Advance rental: ____ month(s) - non-refundable</li>
+                    <li>Late payment penalty: ____% per month</li>
+                    <li>Subleasing: Prohibited / Requires written consent</li>
+                    <li>Quiet enjoyment clause included</li>
+                    <li>Termination notice period: ____ days</li>
+                    <li>Force majeure clause included</li>
+                    <li>Governing law: Republic of the Philippines</li>
+                </ul>
+            </div>
+            
+            <div class="signatures">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Landlord Signature</p>
+                    <p>Name: _______________</p>
+                    <p>Date: _______________</p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Tenant Signature</p>
+                    <p>Name: _______________</p>
+                    <p>Date: _______________</p>
+                </div>
+            </div>
+            
+            <div class="signatures" style="margin-top: 20px;">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Witness 1</p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p>Witness 2 / Notary Public</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='Philippine_Rental_Checklist_Modern.html'">← Back to Checklist</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>

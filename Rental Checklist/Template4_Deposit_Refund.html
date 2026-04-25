@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Deposit Refund Receipt Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #36597A, #1a1a2e); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #36597A, #CFA58C); padding: 30px; text-align: center; color: white; }
+        .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 5px; }
+        .header p { opacity: 0.9; font-size: 0.9rem; }
+        .content { padding: 30px; }
+        .receipt-header { text-align: center; border-bottom: 3px solid #5ee7df; padding-bottom: 20px; margin-bottom: 25px; }
+        .receipt-number { background: #f8fafc; padding: 10px 20px; border-radius: 8px; display: inline-block; font-weight: 600; color: #475569; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.9rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .amount-box { background: linear-gradient(135deg, #5ee7df, #b490ca); color: white; padding: 25px; border-radius: 12px; text-align: center; margin: 20px 0; }
+        .amount-box .label { font-size: 0.9rem; opacity: 0.9; }
+        .amount-box .amount { font-size: 2.5rem; font-weight: 700; margin: 10px 0; }
+        .deductions-section { background: #fef2f2; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .deductions-section h4 { color: #dc2626; margin-bottom: 15px; }
+        .deduction-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .deduction-row input[type="checkbox"] { width: 20px; height: 20px; }
+        .deduction-row input[type="text"] { flex: 1; }
+        .deduction-row input[type="number"] { width: 120px; }
+        .net-refund { background: #dcfce7; padding: 20px; border-radius: 12px; margin: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+        .net-refund .label { font-weight: 600; color: #166534; }
+        .net-refund .amount { font-size: 1.8rem; font-weight: 700; color: #16a34a; }
+        .mode-section { background: #f8fafc; padding: 20px; border-radius: 12px; margin: 20px 0; }
+        .mode-section h4 { margin-bottom: 15px; color: #333; }
+        .mode-options { display: flex; gap: 20px; flex-wrap: wrap; }
+        .mode-option { display: flex; align-items: center; gap: 8px; }
+        .mode-option input { width: 18px; height: 18px; }
+        .acknowledgment { background: #f0fdf4; border: 2px solid #22c55e; padding: 20px; border-radius: 12px; margin: 25px 0; }
+        .acknowledgment h4 { color: #166534; margin-bottom: 10px; }
+        .acknowledgment p { font-size: 0.85rem; color: #166534; line-height: 1.6; }
+        .signatures { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .signature-box { text-align: center; padding: 15px; background: #f8fafc; border-radius: 10px; }
+        .signature-line { border-bottom: 2px solid #333; height: 35px; margin-bottom: 8px; }
+        .signature-box p { font-size: 0.75rem; color: #64748b; }
+        .print-btn { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+        .back-btn { position: fixed; bottom: 30px; left: 30px; background: #475569; color: white; border: none; padding: 15px 25px; border-radius: 50px; font-size: 0.9rem; cursor: pointer; }
+        @media print { body { background: white; padding: 0; } .print-btn, .back-btn { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 OFFICIAL RECEIPT</h1>
+            <p>Security Deposit Refund Receipt</p>
+        </div>
+        <div class="content">
+            <div class="receipt-header">
+                <div class="receipt-number">Receipt No.: _______________</div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="text" placeholder="[DATE OF REFUND]">
+                </div>
+                <div class="form-group">
+                    <label>Received from (Landlord):</label>
+                    <input type="text" placeholder="[OWNER/LANDLORD NAME]">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" placeholder="[LANDLORD ADDRESS]">
+            </div>
+            
+            <div class="form-group">
+                <label>Property Address:</label>
+                <input type="text" placeholder="[RENTAL PROPERTY ADDRESS]">
+            </div>
+            
+            <div class="amount-box">
+                <div class="label">Total Security Deposit Received</div>
+                <div class="amount">PHP _______________</div>
+            </div>
+            
+            <div class="deductions-section">
+                <h4>📝 Less Deductions:</h4>
+                <div class="deduction-row">
+                    <input type="checkbox">
+                    <span>Unpaid Rent:</span>
+                    <input type="number" placeholder="PHP">
+                </div>
+                <div class="deduction-row">
+                    <input type="checkbox">
+                    <span>Damages beyond normal wear:</span>
+                    <input type="number" placeholder="PHP">
+                </div>
+                <div class="deduction-row">
+                    <input type="checkbox">
+                    <span>Unpaid utilities:</span>
+                    <input type="number" placeholder="PHP">
+                </div>
+                <div class="deduction-row">
+                    <input type="checkbox">
+                    <span>Other (specify):</span>
+                    <input type="number" placeholder="PHP">
+                </div>
+                <div style="text-align: right; margin-top: 15px; font-weight: 600;">
+                    Total Deductions: PHP _______________
+                </div>
+            </div>
+            
+            <div class="net-refund">
+                <span class="label">NET REFUND AMOUNT:</span>
+                <span class="amount">PHP _______________</span>
+            </div>
+            
+            <div class="mode-section">
+                <h4>💳 Mode of Refund:</h4>
+                <div class="mode-options">
+                    <label class="mode-option"><input type="radio" name="mode"><span>Cash</span></label>
+                    <label class="mode-option"><input type="radio" name="mode"><span>Bank Transfer</span></label>
+                    <label class="mode-option"><input type="radio" name="mode"><span>Check</span></label>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Bank Details (if applicable):</label>
+                    <input type="text" placeholder="Bank Name: ___________ Account Name: ___________ Account No.: ___________">
+                </div>
+            </div>
+            
+            <div class="acknowledgment">
+                <h4>✅ Tenant Acknowledgment</h4>
+                <p>I, _________________________, hereby acknowledge receipt of the net refund amount stated above. I confirm that all obligations under the Lease Agreement dated _______________ for the property at _________________________ have been settled, except for those specifically reserved in writing.</p>
+                <p style="margin-top: 10px;">This receipt serves as final settlement of the security deposit refund.</p>
+            </div>
+            
+            <div class="signatures">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p><strong>Tenant Signature</strong></p>
+                    <p>Name: _______________</p>
+                    <p>Date: _______________</p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p><strong>Landlord Signature</strong></p>
+                    <p>Name: _______________</p>
+                    <p>Date: _______________</p>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <p><strong>Witness</strong></p>
+                    <p>Name: _______________</p>
+                    <p>Date: _______________</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="back-btn" onclick="window.location.href='Philippine_Rental_Checklist_Modern.html'">← Back to Checklist</button>
+    <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</body>
+</html>
