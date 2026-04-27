@@ -3,7 +3,7 @@
 ================================================================================
 
 CONGRATULATIONS! You now have access to the complete Philippine Rental 
-Agreement Checklist + 5 Templates.
+Agreement Checklist + 6 Templates.
 
 ================================================================================
 📁 FILES INCLUDED
@@ -32,6 +32,18 @@ Agreement Checklist + 5 Templates.
 6. Template5_Rent_Increase.html
    → Rent Increase Notice Template
    → Formal 90-day notice for rent increases
+
+7. Template6_Condo_For_Airbnb_Checklist.html
+   → Essential checklist before buying condo for Airbnb
+   → Avoid costly mistakes
+
+8. index.html
+   → Sales page
+   → Sales page
+
+7. Template6_Condo_For_Airbnb_Checklist.html
+   → Essential checklist before buying condo for Airbnb
+   → Avoid costly mistakes
 
 ================================================================================
 🚀 HOW TO OPEN AND USE
