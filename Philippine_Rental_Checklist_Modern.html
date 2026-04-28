@@ -460,12 +460,32 @@
             transform: translateY(-3px);
         }
         
+        .section-print-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #36597A;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        
+        .section-print-btn:hover {
+            opacity: 1;
+            background: #4a7a9e;
+        }
+        
         @media print {
             body {
                 background: white;
                 padding: 0;
             }
-            .print-btn {
+            .print-btn, .section-print-btn {
+                display: none;
                 display: none;
             }
             .check-item {
@@ -525,6 +545,7 @@
         
         <!-- SECTION 1 -->
         <div class="section" id="section1">
+            <button class="section-print-btn" onclick="printSection('section1')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #667eea, #764ba2);">1</div>
                 <div class="section-title">
@@ -601,6 +622,7 @@
         
         <!-- SECTION 2 -->
         <div class="section" id="section2">
+            <button class="section-print-btn" onclick="printSection('section2')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #11998e, #38ef7d);">2</div>
                 <div class="section-title">
@@ -706,6 +728,7 @@
         
         <!-- SECTION 3 -->
         <div class="section" id="section3">
+            <button class="section-print-btn" onclick="printSection('section3')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #f093fb, #f5576c);">3</div>
                 <div class="section-title">
@@ -839,6 +862,7 @@
         
         <!-- SECTION 4 -->
         <div class="section" id="section4">
+            <button class="section-print-btn" onclick="printSection('section4')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">4</div>
                 <div class="section-title">
@@ -899,6 +923,7 @@
         
         <!-- SECTION 5 -->
         <div class="section" id="section5">
+            <button class="section-print-btn" onclick="printSection('section5')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">5</div>
                 <div class="section-title">
@@ -950,6 +975,7 @@
         
         <!-- SECTION 6 -->
         <div class="section" id="section6">
+            <button class="section-print-btn" onclick="printSection('section6')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #fa709a, #fee140);">6</div>
                 <div class="section-title">
@@ -1027,6 +1053,7 @@
         
         <!-- SECTION 7 -->
         <div class="section" id="section7">
+            <button class="section-print-btn" onclick="printSection('section7')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">7</div>
                 <div class="section-title">
@@ -1113,6 +1140,7 @@
         
         <!-- SECTION 8 -->
         <div class="section" id="section8">
+            <button class="section-print-btn" onclick="printSection('section8')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #f857a6, #ff5858);">8</div>
                 <div class="section-title">
@@ -1194,6 +1222,7 @@
         
         <!-- SECTION 9 -->
         <div class="section" id="section9">
+            <button class="section-print-btn" onclick="printSection('section9')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #5ee7df, #b490ca);">9</div>
                 <div class="section-title">
@@ -1282,6 +1311,7 @@
         
         <!-- SECTION 10 -->
         <div class="section" id="section10">
+            <button class="section-print-btn" onclick="printSection('section10')">🖨️ Print</button>
             <div class="section-header">
                 <div class="section-number" style="background: linear-gradient(135deg, #36597A, #2a4a66);">10</div>
                 <div class="section-title">
@@ -1375,5 +1405,35 @@
     </div>
     
     <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    
+    <script>
+        function printSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const printableContent = section.innerHTML;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Print Section</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+                        h2 { color: #36597A; margin-bottom: 10px; }
+                        ul { list-style: none; padding: 0; }
+                        li { padding: 8px 0; border-bottom: 1px solid #eee; }
+                        li::before { content: "☐"; margin-right: 10px; }
+                        .checked { text-decoration: line-through; color: #999; }
+                        .checked::before { content: "☑"; }
+                    </style>
+                </head>
+                <body>
+                    ${printableContent}
+                    <script>window.onload = function() { window.print(); }<\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+    </script>
 </body>
 </html>
